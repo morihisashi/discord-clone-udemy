@@ -5,9 +5,20 @@ const Sidebar = () => {
     return (
         <div className='sidebar'>
             {/* sidebarLeft */}
-            <div className='sidebarLeft'></div>
+            <div className='sidebarLeft'>
+                <div className='serverIcon'>
+                    <img src="./logo192.png" alt=""></img>
+                </div>
+                <div className='serverIcon'>
+                    <img src="./logo192.png" alt=""></img>
+                </div>
+            </div>
             {/* sidebarRight */}
-            <div className='sidebarLeft'></div>
+            <div className='sidebarRight'>
+                <div className='sidebarTop'>
+                    <h3>Discord</h3>
+                </div>
+            </div>
         </div>
     )
 }
