@@ -26,7 +26,7 @@ const Sidebar = () => {
                     <div className='sidebarChannelsHeader'>
                         <div className='sidebarHeader'>
                             <ExpandMoreIcon />
-                            <h4>プログラミングチャンネル</h4>
+                            <h4>トリコンチャンネル</h4>
                         </div>
                         <AddIcon className='sidebarIcon' />
                     </div>
