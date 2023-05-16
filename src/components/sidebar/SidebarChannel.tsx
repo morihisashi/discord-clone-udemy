@@ -6,7 +6,7 @@ const SidebarChannel = () => {
         <div className='sidebarChannel'>
             <h4>
                 <span className='sidebarChannelHash'>#</span>
-                Udemy
+                Udemy is fun
             </h4>
         </div>
     )
