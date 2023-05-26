@@ -81,10 +81,12 @@
 
                 img {
                     width: 60px;
+                    border-radius: 50%;
                 }
 
                 .accountName {
                     margin-left: 5px;
+                    width: 120px;
 
                     h4 {
                         color: white;
@@ -99,7 +101,7 @@
                 .sidebarVoice {
                     display: flex;
                     align-items: center;
-                    margin-left: 70px;
+                    margin-left: 20px;
                     color: #686a6e;
                 }
             }
