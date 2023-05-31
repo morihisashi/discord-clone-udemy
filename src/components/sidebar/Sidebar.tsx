@@ -9,10 +9,17 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import { auth, db } from '../../firebase';
 import { useAppSelector } from '../../app/hooks';
 import useCollection from '../../hooks/useCollection';
+import { collection, addDoc } from "firebase/firestore";
 
 const Sidebar = () => {
     const user = useAppSelector((state) => state.user);
     const { documents: channels } = useCollection("channels");
+    const addChannel = async () => {
+        let channelName: string | null = prompt("新しいチャンネルを作成します");
+        if (channelName) {
+            await addDoc(collection(db, "channels"), { channelName: channelName, });
+        }
+    }
     return (
         <div className='sidebar'>
             {/* sidebarLeft */}
@@ -37,7 +44,7 @@ const Sidebar = () => {
                             <ExpandMoreIcon />
                             <h4>トリコンチャンネル</h4>
                         </div>
-                        <AddIcon className='sidebarIcon' />
+                        <AddIcon className='sidebarIcon' onClick={() => addChannel()} />
                     </div>
                     <div className='sidebarChannelList'>
                         {channels.map((channel) => (
