@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import './App.scss';
 import Sidebar from './components/sidebar/Sidebar';
 import Chat from './components/chat/Chat';
-import { useSelector } from 'react-redux';
 import Login from './components/login/Login';
 import { useAppDispatch, useAppSelector } from './app/hooks';
 import { auth } from './firebase';
@@ -12,7 +11,7 @@ import { ErrorFallBack } from './utils/ErrorFallBack';
 
 function App() {
 
-  const user = useAppSelector((state) => state.user);
+  const user = useAppSelector((state) => state.user.user);
   console.log(user);
   // const user = null;
 
@@ -20,7 +19,7 @@ function App() {
 
   useEffect(() => {
     auth.onAuthStateChanged((loginUser) => {
-      console.log(loginUser);
+      // console.log(loginUser);
       if (loginUser) {
         dispatch(login({
           uid: loginUser.uid,
